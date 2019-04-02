@@ -201,7 +201,8 @@ a:hover {
   position: relative;
   display: block;
   max-width: 25rem;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0 0 15px 3px #b5b5b6;
 }
 
 .project .project-item .project-item-caption {
@@ -209,6 +210,7 @@ a:hover {
   transition: all ease 0.5s;
   opacity: 0;
   background-color: rgba(220, 53, 69, 0.5);
+  box-shadow: 0 0 20px 5px #989ea3;
 }
 
 .project .project-item .project-item-caption:hover {
