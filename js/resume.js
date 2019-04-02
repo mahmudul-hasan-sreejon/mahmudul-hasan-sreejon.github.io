@@ -25,4 +25,22 @@
     target: '#sideNav'
   });
 
+  // show tooltip
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+
+  // Modal popup
+  $('.project-item').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#username',
+    modal: true
+  });
+  // Modal dismiss
+  $(document).on('click', '.project-modal-dismiss', function(e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
 })(jQuery); // End of use strict
