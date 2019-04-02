@@ -276,3 +276,21 @@ a:hover {
   background-color: #343a40;
   border-color: #343a40;
 }
+
+
+/* -scroll to top button ------------------------------------------------------ */
+
+
+.scroll-to-top {
+  z-index: 1042;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+
+.scroll-to-top a {
+  width: 2.9rem;
+  height: 2.9rem;
+  background-color: rgba(33, 37, 41, 0.5);
+  line-height: 3.1rem;
+}
