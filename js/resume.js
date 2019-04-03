@@ -53,4 +53,19 @@
     }
   });
 
+  // Open link in a new tab
+  $("a.new-tab-open").on("click", function(event) {
+    // Prevent default link behavior
+    event.preventDefault();
+    event.stopPropagation();
+
+    // Get link
+    var link = $(this).attr('href');
+
+    // Simulate Asynchronous delay for .3 sec
+    setTimeout(function(event) {
+      window.open(link, '_blank');
+    }, 300);
+});
+
 })(jQuery); // End of use strict
