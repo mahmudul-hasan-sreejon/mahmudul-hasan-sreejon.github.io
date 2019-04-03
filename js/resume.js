@@ -35,7 +35,8 @@
     type: 'inline',
     preloader: false,
     focus: '#username',
-    modal: false
+    modal: false,
+    showCloseBtn: false
   });
   // Modal dismiss
   $(document).on('click', '.project-modal-dismiss', function(e) {

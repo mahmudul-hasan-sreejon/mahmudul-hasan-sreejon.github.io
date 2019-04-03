@@ -277,6 +277,8 @@ a:hover {
 	box-shadow: 0 0 15px 3px #b5b5b6;;
 }
 
+/* -button ------------------------------------------------------ */
+
 .btn {
   border-width: 2px;
 }
@@ -289,6 +291,16 @@ a:hover {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #343a40;
   border-color: #343a40;
+}
+
+.btn-danger {
+  background-color: #DC3545;
+  border-color: #DC3545;
+}
+
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+  background-color: #a71d2a;
+  border-color: #a71d2a;
 }
 
 /* -scroll to top button ------------------------------------------------------ */
