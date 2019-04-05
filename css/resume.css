@@ -340,6 +340,7 @@ a:hover {
 	text-align: center;
 	text-transform: uppercase;
 	color: #ededed;
+	opacity: 0;
 }
 
 .loader-frame {
