@@ -1,6 +1,69 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  // startup animation
+  document.addEventListener('DOMContentLoaded', () => {
+    // preload animation
+    anime.timeline({
+      targets: ".preload",
+      easing: "easeOutExpo"
+    })
+    .add({
+      width: ["0vw", "100vw"],
+      opacity: 1,
+      duration: 1200
+    })
+    .add({
+      delay: 2700,
+      translateX: "100vw",
+      duration: 1500,
+      complete: function(anime) {
+        document.querySelector('.preload').remove();
+      }
+    });
+
+    // heading animation
+    anime({
+      targets: ".heading",
+      delay: 600,
+      opacity: 1,
+      display: "block",
+      duration: 2000,
+      translateY: ["-300px", "0px"],
+      easing: "easeOutExpo"
+    });
+
+    // loader animation
+    anime({
+      targets: ".loader",
+      delay: 2000,
+      duration: 2300,
+      width: ["0", "100%"],
+      easing: "easeOutExpo"
+    });
+
+    // loader-frame animation
+    anime({
+      targets: ".loader-frame",
+      delay: 1500,
+      duration: 1800,
+      opacity: 1,
+      easing: "easeOutExpo"
+    });
+  });
+
+  // main-content animation
+  anime({
+    targets: '.main-content',
+    opacity: 1,
+    duration: 1800,
+    // translateX: "100vw",
+    translateY: ["-300px", "0px"],
+    easing: "easeOutExpo",
+    delay: (el, i) => 5200 + 100 * i
+  });
+
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -38,6 +101,7 @@
     modal: false,
     showCloseBtn: false
   });
+
   // Modal dismiss
   $(document).on('click', '.project-modal-dismiss', function(e) {
     e.preventDefault();

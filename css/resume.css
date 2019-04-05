@@ -1,6 +1,5 @@
 /* -resume ------------------------------------------------------ */
 
-
 body {
 	font-family: Muli, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	padding-top: 54px;
@@ -306,7 +305,7 @@ a:hover {
 /* -scroll to top button ------------------------------------------------------ */
 
 .scroll-to-top {
-  z-index: 1042;
+  z-index: 1;
   right: 1rem;
   bottom: 1rem;
   display: none;
@@ -317,4 +316,49 @@ a:hover {
   height: 2.9rem;
   background-color: rgba(33, 37, 41, 0.5);
   line-height: 3.1rem;
+}
+
+/* -preload ------------------------------------------------------ */
+
+.preload {
+	width: 100%;
+	height: 100%;
+	background: #495057;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+.heading {
+	width: 300px;
+	height: 70px;
+	margin: 150px auto 150px auto;
+	font-size: 60px;
+	font-weight: 600;
+	text-shadow: -1px 2px 2px #000;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ededed;
+}
+
+.loader-frame {
+	margin: auto;
+	position: relative;
+	height: 7px;
+	width: 190px;
+	background: #ededed;
+	border-radius: 100px;
+	opacity: 0;
+}
+
+.loader {
+	height: 7px;
+	width: 190px;
+	border-radius: 100px;
+	background: #DC3545;
+}
+
+.main-content {
+	opacity: 0;
 }
