@@ -1,0 +1,32 @@
+{
+  "name": "Resume",
+  "version": "1.0.0",
+  "description": "My personal resume website.",
+  "main": "index.html",
+  "scripts": {
+    "minify": "gulp styles scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmudul-hasan-sreejon/mahmudul-hasan-sreejon.github.io.git"
+  },
+  "author": "Mahmudul Hasan Sreejon",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mahmudul-hasan-sreejon/mahmudul-hasan-sreejon.github.io/issues"
+  },
+  "homepage": "https://github.com/mahmudul-hasan-sreejon/mahmudul-hasan-sreejon.github.io#readme",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "^2.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify-es": "^1.0.4",
+    "run-sequence": "^1.2.2"
+  },
+  "engines": {
+    "node": "8.11.4"
+  }
+}
