@@ -1,6 +1,7 @@
 // 'use strict';
 
 let autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 let csso = require('gulp-csso');
 let del = require('del');
 let gulp = require('gulp');

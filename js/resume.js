@@ -50,17 +50,17 @@
       opacity: 1,
       easing: "easeOutExpo"
     });
-  });
 
-  // main-content animation
-  anime({
-    targets: '.main-content',
-    opacity: 1,
-    duration: 1800,
-    // translateX: "100vw",
-    translateY: ["-300px", "0px"],
-    easing: "easeOutExpo",
-    delay: (el, i) => 5200 + 100 * i
+    // main-content animation
+    anime({
+      targets: '.main-content',
+      opacity: 1,
+      duration: 1800,
+      // translateX: "100vw",
+      translateY: ["-300px", "0px"],
+      easing: "easeOutExpo",
+      delay: (el, i) => 5200 + 100 * i
+    });
   });
 
 
