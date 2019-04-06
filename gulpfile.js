@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 let autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
@@ -27,7 +27,7 @@ const AUTOPREFIXER_BROWSERS = [
 // Gulp task to minify CSS files
 gulp.task('styles', function () {
 	return (
-		gulp.src('./css/resume.css')
+		gulp.src('./vendor/_resume-custom-styles-and-animations/resume.css')
     // Auto-prefix css styles for cross browser compatibility
     .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     // Minify the file
@@ -42,7 +42,7 @@ gulp.task('styles', function () {
 // Gulp task to minify JavaScript files
 gulp.task('scripts', function() {
 	return (
-		gulp.src('./js/resume.js')
+		gulp.src('./vendor/_resume-custom-styles-and-animations/resume.js')
     // Minify the file
 		.pipe(uglify())
 		// Rename the minified file
