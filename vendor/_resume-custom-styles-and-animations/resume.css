@@ -363,3 +363,16 @@ a:hover {
 .main-content {
 	opacity: 0;
 }
+
+/* -Hide scroll bar ------------------------------------------------------ */
+
+/* IE 10+ and Firefox */
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* Safari and Chrome */
+html::-webkit-scrollbar {
+	display: none;
+}
