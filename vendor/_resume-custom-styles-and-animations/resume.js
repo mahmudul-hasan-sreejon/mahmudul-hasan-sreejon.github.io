@@ -97,9 +97,15 @@
   $('.project-item').magnificPopup({
     type: 'inline',
     preloader: false,
-    focus: '#username',
     modal: false,
-    showCloseBtn: false
+    showCloseBtn: false,
+    removalDelay: 500, // delay removal by X to allow out-animation
+    midClick: true, // allow opening popup on middle mouse click
+    callbacks: {
+      beforeOpen: function() {
+        this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
   });
 
   // Modal dismiss
