@@ -31,10 +31,9 @@ var AUTOPREFIXER_BROWSERS = [
 // File source paths start
 var CSS_PATH = 'src/styles/**/*.css';
 var SCRIPTS_PATH = 'src/scripts/**/*.js';
-var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif}';
+var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
 
-// var DIST_PATH = 'public';
-var DIST_PATH = '_test';
+var DIST_PATH = 'public';
 // File source paths end
 
 
@@ -81,9 +80,9 @@ gulp.task('scripts', function() {
 		.pipe(sourcemaps.init())
 		.pipe(babel({ presets: ['@babel/env'] })) // transpile all script files to es5
 		.pipe(uglify()) // minify all the script files
-		.pipe(concat('scripts.min.js')) // concat all the script files
+		.pipe(concat('resume.min.js')) // concat all the script files
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(DIST_PATH + '/sripts')) // new minified script file location
+		.pipe(gulp.dest(DIST_PATH + '/scripts')) // new minified script file location
 		.pipe(livereload()) // check for updates
 	);
 });
