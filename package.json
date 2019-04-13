@@ -4,8 +4,8 @@
   "description": "My personal resume website",
   "main": "index.html",
   "scripts": {
-    "dev": "gulp watch",
-    "minify": "gulp "
+    "start": "node server.js",
+    "dev": "gulp watch"
   },
   "repository": {
     "type": "git",
