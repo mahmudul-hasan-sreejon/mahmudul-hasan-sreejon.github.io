@@ -1,10 +1,11 @@
 {
   "name": "Resume",
-  "version": "1.0.0",
-  "description": "My personal resume website.",
+  "version": "1.0.5",
+  "description": "My personal resume website",
   "main": "index.html",
   "scripts": {
-    "minify": "gulp styles scripts"
+    "dev": "gulp watch",
+    "minify": "gulp "
   },
   "repository": {
     "type": "git",
@@ -16,16 +17,27 @@
     "url": "https://github.com/mahmudul-hasan-sreejon/mahmudul-hasan-sreejon.github.io/issues"
   },
   "homepage": "https://github.com/mahmudul-hasan-sreejon/mahmudul-hasan-sreejon.github.io#readme",
+  "dependencies": {
+    "static-server": "^2.2.1"
+  },
   "devDependencies": {
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "latest",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "del": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^2.0.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-uglify-es": "^1.0.4",
-    "run-sequence": "^1.2.2"
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-livereload": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "node-sass": "^4.11.0"
   },
   "engines": {
     "node": "8.11.4"
