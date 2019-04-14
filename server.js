@@ -7,5 +7,6 @@ var server = new StaticServer({
 });
 
 server.start(function() {
-    console.log('Server started on port ' + server.port + '...');
+    console.log('App running at: http://localhost:' + server.port + '/');
+    console.log('Type Control-C twice to stop.\n');
 });
