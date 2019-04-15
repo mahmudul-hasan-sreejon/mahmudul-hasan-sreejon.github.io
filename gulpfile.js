@@ -35,6 +35,7 @@ var AUTOPREFIXER_BROWSERS = [
 var CSS_PATH = 'src/styles/**/*.css';
 var SCRIPTS_PATH = 'src/scripts/**/*.js';
 var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
+var TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks)';
 
 var DIST_PATH = 'public';
 // File source paths end
@@ -117,26 +118,26 @@ gulp.task('images', function() {
 
 // Templates task
 gulp.task('templates', function() {
-    return (
-		gulp.src('src/templates/pages/**/*.+(html|nunjucks)') // path for source template files
+	return (
+		gulp.src(TEMPLATES_PATH) // path for source template files
 		.pipe(plumber(function(err) { // restart server if any error occurs
 			console.log('Templates Task Error:');
 			console.log(err);
 			this.emit('end');
 		}))
-        .pipe(data(function() { // add data from data.json file
-            return require('./src/templates/data.json');
-        }))
-        .pipe(nunjucksRender({ // render templates
+		.pipe(data(function() { // add data from data.json file
+				return require('./src/templates/data.json');
+		}))
+		.pipe(nunjucksRender({ // render templates
 			path: ['src/templates/layouts']
-        }))
-        // .pipe(htmlmin({ // Minify html
-        //     collapseWhitespace: true,
-        //     removeComments: true
+		}))
+		// .pipe(htmlmin({ // Minify html
+		// 	collapseWhitespace: true,
+		// 	removeComments: true
 		// }))
 		.pipe(gulp.dest('src')) // new compressed template file(s) location
 		.pipe(livereload()) // check for updates
-    );
+	);
 });
 
 
@@ -149,4 +150,6 @@ gulp.task('watch', ['default'], function() {
 	gulp.watch(CSS_PATH, ['styles']); // run `styles` task when any change occurs in CSS_PATH
 	gulp.watch(SCRIPTS_PATH, ['scripts']); // run `scripts` task when any change occurs in SCRIPTS_PATH
 	gulp.watch(IMAGES_PATH, ['images']); // run `images` task when any change occurs in IMAGES_PATH
+
+	// gulp.watch(TEMPLATES_PATH, ['templates']); // run `templates` task when any change occurs in TEMPLATES_PATH
 });
