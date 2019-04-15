@@ -14,6 +14,9 @@ var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var imageminPngquant = require('imagemin-pngquant');
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
+var htmlmin = require('gulp-htmlmin');
 
 // Set browser(s) to support autoprefixer start
 var AUTOPREFIXER_BROWSERS = [
@@ -52,7 +55,7 @@ gulp.task('clean', function() {
 gulp.task('styles', function() {
 	return (
 		gulp.src(CSS_PATH) // path for source css files
-		.pipe(plumber(function(err) { // Restart server if any error occurs
+		.pipe(plumber(function(err) { // restart server if any error occurs
 			console.log('Styles Task Error:');
 			console.log(err);
 			this.emit('end');
@@ -72,7 +75,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return (
 		gulp.src(SCRIPTS_PATH) // path for source script files
-		.pipe(plumber(function(err) { // Restart server if any error occurs
+		.pipe(plumber(function(err) { // restart server if any error occurs
 			console.log('Scripts Task Error:');
 			console.log(err);
 			this.emit('end');
@@ -92,6 +95,11 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
 	return (
 		gulp.src(IMAGES_PATH) // path for source image files
+		.pipe(plumber(function(err) { // restart server if any error occurs
+			console.log('Images Task Error:');
+			console.log(err);
+			this.emit('end');
+		}))
 		.pipe(imagemin()) // lossless compression
 		// .pipe(imagemin([
 		// 	imagemin.gifsicle(),
@@ -104,6 +112,31 @@ gulp.task('images', function() {
 		.pipe(gulp.dest(DIST_PATH + '/images')) // new compressed image file(s) location
 		.pipe(livereload()) // check for updates
 	);
+});
+
+
+// Templates task
+gulp.task('templates', function() {
+    return (
+		gulp.src('src/templates/pages/**/*.+(html|nunjucks)') // path for source template files
+		.pipe(plumber(function(err) { // restart server if any error occurs
+			console.log('Templates Task Error:');
+			console.log(err);
+			this.emit('end');
+		}))
+        .pipe(data(function() { // add data from data.json file
+            return require('./src/templates/data.json');
+        }))
+        .pipe(nunjucksRender({ // render templates
+			path: ['src/templates/layouts']
+        }))
+        // .pipe(htmlmin({ // Minify html
+        //     collapseWhitespace: true,
+        //     removeComments: true
+		// }))
+		.pipe(gulp.dest('src')) // new compressed template file(s) location
+		.pipe(livereload()) // check for updates
+    );
 });
 
 
