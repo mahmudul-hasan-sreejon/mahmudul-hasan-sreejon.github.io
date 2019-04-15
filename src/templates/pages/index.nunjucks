@@ -7,23 +7,23 @@
 {% block content %}
 
 
-    <h1>This is the index page</h1>
+  <h1>This is the index page</h1>
 
-    <!-- Adds the navigation partial -->
-    {% include "partials/navigation.nunjucks" %}
-
-
-    <!-- Call Nunjucks nav-macro -->
-    {{nav.active('home')}}
+  <!-- Adds the navigation partial -->
+  {% include "partials/navigation.nunjucks" %}
 
 
-    <div class="gallery">
-        <!-- Loops through "images" array -->
-        {% for image in images %}
-        <div class="gallery__item">
-            <img src="{{image.src}}" alt="{{image.alt}}">
-        </div>
-        {% endfor %}
+  <!-- Call Nunjucks nav-macro -->
+  {{nav.active('home')}}
+
+
+  <div class="gallery">
+    <!-- Loops through "images" array -->
+    {% for image in images %}
+    <div class="gallery__item">
+      <img src="{{image.src}}" alt="{{image.alt}}">
     </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}
