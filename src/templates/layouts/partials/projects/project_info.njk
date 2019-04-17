@@ -1,3 +1,15 @@
+{#
+<div class="gallery">
+  <!-- Loops through "images" array -->
+  {% for image in images %}
+  <div class="gallery__item">
+    <img src="{{image.src}}" alt="{{image.alt}}">
+  </div>
+  {% endfor %}
+</div>
+#}
+
+
       <!-- all project info start -->
     
       <!-- project 1 info start -->
