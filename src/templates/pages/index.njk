@@ -1,24 +1,28 @@
-{% extends 'master.nunjucks' %}
+{% extends 'master.njk' %}
 
 
 {% block content %}
-  {% include 'partials/preloader.nunjucks' %}
+  {% include 'partials/preloader.njk' %}
 
   <!-- main content start -->
   <span class="main-content">
-    {% include "partials/navbar.nunjucks" %}
+    {% include "partials/navbar.njk" %}
 
     <!-- content start -->
     <div class="container-fluid p-0 main-content">
-      {% include "partials/sections/about.nunjucks" %}
+      {% include "partials/sections/about.njk" %}
       <hr class="m-0">
-      {% include "partials/sections/experience.njk" %}
+
+      {% include "partials/sections/experiences.njk" %}
       <hr class="m-0">
-      {# {% include "partials/sections/.nunjucks" %} #}
+
+      {% include "partials/sections/projects.njk" %}
       <hr class="m-0">
-      {# {% include "partials/sections/.nunjucks" %} #}
+
+      {% include "partials/sections/skills.njk" %}
       <hr class="m-0">
-      {# {% include "partials/sections/.nunjucks" %} #}
+
+      {# {% include "partials/sections/.njk" %} #}
     </div>
     <!-- content end -->
 
