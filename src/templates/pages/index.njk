@@ -36,23 +36,7 @@
     </div>
     <!-- content end -->
 
-    
+    {% include "partials/scroll_to_top.njk" %}
   </span>
   <!-- main content end -->
-
-
-
-
-
-  {#
-  <div class="gallery">
-    <!-- Loops through "images" array -->
-    {% for image in images %}
-    <div class="gallery__item">
-      <img src="{{image.src}}" alt="{{image.alt}}">
-    </div>
-    {% endfor %}
-  </div>
-  #}
-
 {% endblock %}
