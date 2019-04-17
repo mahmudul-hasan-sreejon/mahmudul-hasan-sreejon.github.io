@@ -1,0 +1,43 @@
+{% extends 'master.nunjucks' %}
+
+
+{% block content %}
+  {% include 'partials/preloader.nunjucks' %}
+
+  <!-- main content start -->
+  <span class="main-content">
+    {% include "partials/navbar.nunjucks" %}
+
+    <!-- content start -->
+    <div class="container-fluid p-0 main-content">
+      {% include "partials/sections/about.nunjucks" %}
+      <hr class="m-0">
+      {% include "partials/sections/experience.njk" %}
+      <hr class="m-0">
+      {# {% include "partials/sections/.nunjucks" %} #}
+      <hr class="m-0">
+      {# {% include "partials/sections/.nunjucks" %} #}
+      <hr class="m-0">
+      {# {% include "partials/sections/.nunjucks" %} #}
+    </div>
+    <!-- content end -->
+
+  </span>
+  <!-- main content end -->
+
+
+
+
+
+  {#
+  <div class="gallery">
+    <!-- Loops through "images" array -->
+    {% for image in images %}
+    <div class="gallery__item">
+      <img src="{{image.src}}" alt="{{image.alt}}">
+    </div>
+    {% endfor %}
+  </div>
+  #}
+
+{% endblock %}

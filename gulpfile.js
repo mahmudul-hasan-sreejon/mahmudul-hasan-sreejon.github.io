@@ -35,7 +35,7 @@ var AUTOPREFIXER_BROWSERS = [
 var CSS_PATH = 'src/styles/**/*.css';
 var SCRIPTS_PATH = 'src/scripts/**/*.js';
 var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
-var TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks)';
+var TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks|njk)';
 
 var DIST_PATH = 'public';
 // File source paths end
