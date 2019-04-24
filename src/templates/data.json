@@ -1,12 +1,44 @@
 {
-  "images": [
-    {
-      "src": "image-one.png",
-      "alt": "Image one alt text"
+  "personalInfo": {
+    "name": {
+      "first": "Mahmudul",
+      "last": "Hasan",
+      "pet": "Sreejon"
     },
-    {
-      "src": "image-two.png",
-      "alt": "Image two alt text"
-    }
-  ]
+    "email": "mahmudul.hasan.sreejon@gmail.com",
+    "address": "364/8 Senpara, Mirpur 10, Dhaka 1216, Bangladesh",
+    "phoneNumber": "(+880) 1670115309"
+  },
+
+  "aboutSection": {
+    "userOverview": [
+      "Inquisitive, energetic B.Sc. (Hons) graduate offering a strong foundation in software engineering and programming principals across multiple platforms",
+      "Experienced on writing highly maintainable and robust object-oriented code",
+      "Adapted at developing, designing, testing, debugging and installing software solutions while evaluating system feasibility",
+      "Passion for programming and ability to learn new technologies",
+      "Successful working experience in both team and self-directed settings"
+    ],
+    "userContact": [
+      {
+        "href": "https://www.linkedin.com/in/mahmudul-hasan-sreejon",
+        "icon": "fab fa-linkedin-in"
+      },
+      {
+        "href": "https://www.github.com/mahmudul-hasan-sreejon",
+        "icon": "fab fa-github"
+      },
+      {
+        "href": "https://web.facebook.com/mahmudul.hasan.sreejon",
+        "icon": "fab fa-facebook-f"
+      },
+      {
+        "href": "https://www.instagram.com/mahmudul.hasan.sreejon/",
+        "icon": "fab fa-instagram"
+      },
+      {
+        "href": "https://twitter.com/sreejonK19",
+        "icon": "fab fa-twitter"
+      }
+    ]
+  }
 }
