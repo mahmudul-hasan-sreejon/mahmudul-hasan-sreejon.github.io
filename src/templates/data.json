@@ -54,6 +54,30 @@
     "Winner of IST Internal Gaming Contest 2013"
   ],
 
+  "educationSection": [
+    {
+      "institute": "Institute of Science and Technology (IST)",
+      "certificate": "Bachelor of Science (Honours)",
+      "department": "Computer Science and Engineering (CSE)",
+      "result": "CGPA: 3.01",
+      "duration": "April 2013 - May 2018"
+    },
+    {
+      "institute": "Sharoj International School and College",
+      "certificate": "Higher Secondary Certificate (HSC)",
+      "department": "Science",
+      "result": "GPA: 4.44",
+      "duration": "2010 - 2012"
+    },
+    {
+      "institute": "Sharoj International School and College",
+      "certificate": "Secondary School Certificate (SSC)",
+      "department": "Science",
+      "result": "GPA: 4.25",
+      "duration": "2008 - 2010"
+    }
+  ],
+
   "head": {
     "title": {
       "description": "Full Stack Web Developer, Problem Solver, Game Developer"
