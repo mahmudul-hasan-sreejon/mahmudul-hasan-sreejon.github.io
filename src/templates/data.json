@@ -135,6 +135,75 @@
     ]
   },
 
+  "projectInfo": [
+    {
+      "id": "project-modal-1",
+      "name": "e-Voting Platform using Blockchain",
+      "image": {
+        "src": "public/images/project-images/project-1-image.png",
+        "alt": "Project Pic 1"
+      },
+      "description": "An Electronic voting platform that uses Blockchain technology which supports distributed network. It provides greater transparency, inherent anonymity and immutability due to open and distributed ledgers. It also delivers security and reliability through image based authentication system.",
+      "link": "https://github.com/mahmudul-hasan-sreejon/e-Voting-with-Blockchain",
+      "duration": "October 2017 - December 2017"
+    },
+    {
+      "id": "project-modal-2",
+      "name": "Dig Out",
+      "image": {
+        "src": "public/images/project-images/project-2-image.png",
+        "alt": "Project Pic 2"
+      },
+      "description": "An open source web search engine for finding websites and images. It evaluates results of web searches for appropriateness and relevancy as related to search query input. It can analyze keywords to achieve optimum numerical ranking for web searches.",
+      "link": "http://dig-out.ml/",
+      "duration": "December 2018 - January 2019"
+    },
+    {
+      "id": "project-modal-3",
+      "name": "Srt-Lnk",
+      "image": {
+        "src": "public/images/project-images/project-3-image.png",
+        "alt": "Project Pic 3"
+      },
+      "description": "Link/Url shortener web application that keeps track of links for individual users built on MeteorJS and React. It provides data security through manual authentication, data validation, publications and subscriptions.",
+      "link": "https://srt-lnk-mhs.herokuapp.com/",
+      "duration": "February 2019"
+    },
+    {
+      "id": "project-modal-4",
+      "name": "Forkify",
+      "image": {
+        "src": "public/images/project-images/project-4-image.png",
+        "alt": "Project Pic 4"
+      },
+      "description": "Recipe web application for kitchen hobbyists and beginner cooks. Search through thousands of recipes for cooking instructions and ingredients; save your favorite recipes via local storage. It uses RESTful approach for fetching data from the Food2Fork API.",
+      "link": "https://forkify-mhs.herokuapp.com",
+      "duration": "February 2019 - March 2019"
+    },
+    {
+      "id": "project-modal-5",
+      "name": "Student Enrolment System",
+      "image": {
+        "src": "public/images/project-images/project-5-image.png",
+        "alt": "Project Pic 5"
+      },
+      "description": "A content management system built for school administrative representatives. It can track student records, make corrections and provides security to all information.",
+      "link": "https://github.com/mahmudul-hasan-sreejon/Student-Enrolment-System",
+      "duration": "August 2016 - September 2016"
+    },
+    {
+      "id": "project-modal-6",
+      "name": "Block Breakout",
+      "image": {
+        "src": "public/images/project-images/project-6-image.png",
+        "alt": "Project Pic 6"
+      },
+      "description": "It is a clone of the classic Breakout game. I hand coded each module i.e. player movements, interaction with other game objects and events etc. Also, designed arts and animations to deliver a great playable environment.",
+      "link": "https://github.com/mahmudul-hasan-sreejon/Block-Breakout",
+      "duration": "January 2019 - March 2019"
+    }
+  ],
+
   "skillsSection": [
     {
       "fieldName": "Programming Language",
