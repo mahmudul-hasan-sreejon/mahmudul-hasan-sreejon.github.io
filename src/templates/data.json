@@ -54,6 +54,13 @@
     "Winner of IST Internal Gaming Contest 2013"
   ],
 
+  "head": {
+    "title": {
+      "description": "Full Stack Web Developer, Problem Solver, Game Developer"
+    },
+    "favicon": "public/images/favicon.ico"
+  },
+
   "navbar": {
     "title": {
       "src": "public/images/profile.png",
