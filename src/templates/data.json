@@ -120,5 +120,208 @@
         "href": "#awards"
       }
     ]
-  }
+  },
+
+  "skillsSection": [
+    {
+      "fieldName": "Programming Language",
+      "skills": [
+        {
+          "title": "C",
+          "icon": "icon-c"
+        },
+        {
+          "title": "C++",
+          "icon": "icon-cplusplus"
+        },
+        {
+          "title": "C#",
+          "icon": "icon-csharp"
+        },
+        {
+          "title": "Python",
+          "icon": "fab fa-python"
+        },
+        {
+          "title": "JavaScript",
+          "icon": "fab fa-js"
+        },
+        {
+          "title": "PHP",
+          "icon": "fab fa-php"
+        }
+      ]
+    },
+    {
+      "fieldName": "Framework / Library",
+      "skills": [
+        {
+          "title": "Bootstrap",
+          "icon": "icon-bootstrap"
+        },
+        {
+          "title": "Flask",
+          "icon": "fas fa-flask"
+        },
+        {
+          "title": "Kivy",
+          "icon": "fab fa-android"
+        },
+        {
+          "title": "Laravel",
+          "icon": "icon-laravel"
+        },
+        {
+          "title": "jQuery",
+          "icon": "icon-jquery"
+        },
+        {
+          "title": "Express.js",
+          "icon": "fab fa-etsy"
+        },
+        {
+          "title": "MeteorJS",
+          "icon": "fas fa-meteor"
+        },
+        {
+          "title": "React",
+          "icon": "fab fa-react"
+        }
+      ]
+    },
+    {
+      "fieldName": "Wed Technology",
+      "skills": [
+        {
+          "title": "HTML5",
+          "icon": "fab fa-html5"
+        },
+        {
+          "title": "CSS3",
+          "icon": "fab fa-css3-alt"
+        },
+        {
+          "title": "Sass",
+          "icon": "fab fa-sass"
+        },
+        {
+          "title": "AJAX",
+          "icon": "fas fa-retweet"
+        },
+        {
+          "title": "Node.js",
+          "icon": "fab fa-node"
+        }
+      ]
+    },
+    {
+      "fieldName": "Database Management System",
+      "skills": [
+        {
+          "title": "MySQL",
+          "icon": "icon-mysql"
+        },
+        {
+          "title": "PostgreSQL",
+          "icon": "icon-postgres"
+        },
+        {
+          "title": "SQLite",
+          "icon": "fas fa-database"
+        },
+        {
+          "title": "MongoDB",
+          "icon": "icon-mongodb"
+        }
+      ]
+    },
+    {
+      "fieldName": "Development Tool",
+      "skills": [
+        {
+          "title": "GitHub",
+          "icon": "fab fa-github"
+        },
+        {
+          "title": "GitLab",
+          "icon": "fab fa-gitlab"
+        },
+        {
+          "title": "Docker",
+          "icon": "fab fa-docker"
+        },
+        {
+          "title": "Slack",
+          "icon": "fab fa-slack"
+        },
+        {
+          "title": "Trello",
+          "icon": "fab fa-trello"
+        },
+        {
+          "title": "Gulp",
+          "icon": "fab fa-gulp"
+        },
+        {
+          "title": "Webpack",
+          "icon": "fas fa-cube"
+        },
+        {
+          "title": "Heroku",
+          "icon": "icon-heroku"
+        }
+      ]
+    },
+    {
+      "fieldName": "Game Engine",
+      "skills": [
+        {
+          "title": "Unity",
+          "icon": "icon-unity"
+        }
+      ]
+    },
+    {
+      "fieldName": "Text Editor & IDE",
+      "skills": [
+        {
+          "title": "VS Code",
+          "icon": "fas fa-file-code"
+        },
+        {
+          "title": "Sublime Text",
+          "icon": "fab fa-stripe-s"
+        },
+        {
+          "title": "Code::Blocks",
+          "icon": "fas fa-qrcode"
+        },
+        {
+          "title": "Rider",
+          "icon": "fas fa-motorcycle"
+        },
+        {
+          "title": "PyCharm",
+          "icon": "fas fa-terminal"
+        },
+        {
+          "title": "WebStorm",
+          "icon": "fas fa-poo-storm"
+        }
+      ]
+    },
+    {
+      "fieldName": "Software & Tool",
+      "skills": [
+        {
+          "title": "Adobe Photoshop",
+          "icon": "fab fa-adobe"
+        },
+        {
+          "title": "Microsoft Office",
+          "icon": "fab fa-microsoft"
+        }
+      ]
+    }
+  ]
 }
