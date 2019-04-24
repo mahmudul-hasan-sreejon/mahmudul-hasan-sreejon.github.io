@@ -40,5 +40,16 @@
         "icon": "fab fa-twitter"
       }
     ]
-  }
+  },
+  "awardsSection": [
+    "ACM International Collegiate Programming Contest Regional finalist in 2013, 2014 and 2017",
+    "Daffodil National Collegiate Programming Contest finalist in 2014",
+    "NSU National Collegiate Programming Contest finalist in 2018",
+    "SUB Inter University Programming Contest finalist in 2014, 2015 and 2017",
+    "BUET Inter University Programming Contest finalist in 2015",
+    "MBSTU Inter University Programming Contest finalist in 2017",
+    "International Space Apps Challenge finalist in 2015",
+    "Winner of IST Internal Programming Contest 2013",
+    "Winner of IST Internal Gaming Contest 2013"
+  ]
 }
