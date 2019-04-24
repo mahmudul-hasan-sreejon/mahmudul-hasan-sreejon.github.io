@@ -78,6 +78,19 @@
     }
   ],
 
+  "experiencesSection": [
+    {
+      "designation": "Game Developer",
+      "company": "Dark Lighters",
+      "activities": [
+        "Assisted in development of new ideas, analysis and design phase and feasibility judgments",
+        "Designed and balanced games including the creation of design documentation for future titles",
+        "Worked in agile scrum environment"
+      ],
+      "duration": "February 2015 - December 2017"
+    }
+  ],
+
   "head": {
     "title": {
       "description": "Full Stack Web Developer, Problem Solver, Game Developer"

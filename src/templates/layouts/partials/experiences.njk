@@ -1,38 +1,31 @@
       <!-- experiences section start -->
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
-  
+
           <h2 class="mb-5">Experience</h2>
-  
-  
-          <!-- experience field 1 start -->
+
+
+          {% for field in experiencesSection %}
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Game Developer</h3>
-              <div class="subheading mb-3">Dark Lighters</div>
-  
+              <h3 class="mb-0">{{field.designation}}</h3>
+              <div class="subheading mb-3">{{field.company}}</div>
+
               <ul class="fa-ul mb-0">
+                {% for activity in field.activities %}
                 <li>
                   <i class="fa-li fa fa-check text-warning"></i>
-                  Assisted in development of new ideas, analysis and design phase and feasibility judgments
+                  {{activity}}
                 </li>
-                <li>
-                  <i class="fa-li fa fa-check text-warning"></i>
-                  Designed and balanced games including the creation of design documentation for future titles
-                </li>
-                <li>
-                  <i class="fa-li fa fa-check text-warning"></i>
-                  Worked in agile scrum environment
-                </li>
+                {% endfor %}
               </ul>
             </div>
-  
+
             <div class="resume-date text-md-right">
-              <b><span class="text-primary">February 2015 - December 2017</span></b>
+              <b><span class="text-primary">{{field.duration}}</span></b>
             </div>
           </div>
-          <!-- experience field 1 end -->
-  
+          {% endfor %}
         </div>
       </section>
       <!-- experiences section end -->
