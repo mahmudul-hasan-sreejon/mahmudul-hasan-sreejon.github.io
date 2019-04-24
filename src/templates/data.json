@@ -41,6 +41,7 @@
       }
     ]
   },
+
   "awardsSection": [
     "ACM International Collegiate Programming Contest Regional finalist in 2013, 2014 and 2017",
     "Daffodil National Collegiate Programming Contest finalist in 2014",
@@ -51,5 +52,42 @@
     "International Space Apps Challenge finalist in 2015",
     "Winner of IST Internal Programming Contest 2013",
     "Winner of IST Internal Gaming Contest 2013"
-  ]
+  ],
+
+  "navbar": {
+    "title": {
+      "src": "public/images/profile.png",
+      "alt": "Profile Pic"
+    },
+    "menuItem": [
+      {
+        "name": "About",
+        "href": "#about"
+      },
+      {
+        "name": "Experience",
+        "href": "#experience"
+      },
+      {
+        "name": "Projects",
+        "href": "#projects"
+      },
+      {
+        "name": "Skills",
+        "href": "#skills"
+      },
+      {
+        "name": "Education",
+        "href": "#education"
+      },
+      {
+        "name": "Interests",
+        "href": "#interests"
+      },
+      {
+        "name": "Awards",
+        "href": "#awards"
+      }
+    ]
+  }
 }
