@@ -19,7 +19,7 @@
                 <img class="img-fluid mb-5 project-modal-img" src="{{project.image.src}}" alt="{{project.image.alt}}">
 
                 <p class="mb-3">
-                  {{project.description | string}}
+                  {{project.description | safe}}
                 </p>
 
                 <p class="mb-5">
