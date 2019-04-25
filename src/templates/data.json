@@ -207,27 +207,45 @@
   "projectsSection": [
     {
       "id": "#project-modal-1",
-      "image": "public/images/project-images/project-1-image.png"
+      "image": {
+        "src": "public/images/project-images/project-1-image.png",
+        "alt": "Project Modal Pic 1"
+      }
     },
     {
       "id": "#project-modal-2",
-      "image": "public/images/project-images/project-2-image.png"
+      "image": {
+        "src": "public/images/project-images/project-2-image.png",
+        "alt": "Project Modal Pic 2"
+      }
     },
     {
       "id": "#project-modal-3",
-      "image": "public/images/project-images/project-3-image.png"
+      "image": {
+        "src": "public/images/project-images/project-3-image.png",
+        "alt": "Project Modal Pic 3"
+      }
     },
     {
       "id": "#project-modal-4",
-      "image": "public/images/project-images/project-4-image.png"
+      "image": {
+        "src": "public/images/project-images/project-4-image.png",
+        "alt": "Project Modal Pic 4"
+      }
     },
     {
       "id": "#project-modal-5",
-      "image": "public/images/project-images/project-5-image.png"
+      "image": {
+        "src": "public/images/project-images/project-5-image.png",
+        "alt": "Project Modal Pic 5"
+      }
     },
     {
       "id": "#project-modal-6",
-      "image": "public/images/project-images/project-6-image.png"
+      "image": {
+        "src": "public/images/project-images/project-6-image.png",
+        "alt": "Project Modal Pic 6"
+      }
     }
   ],
 

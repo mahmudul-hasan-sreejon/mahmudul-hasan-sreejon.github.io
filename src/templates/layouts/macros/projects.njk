@@ -1,4 +1,4 @@
-{% macro projectField(modalId, image) %}
+{% macro projectField(modalId, imageSrc, imageAlt) %}
             <div class="col-md-6 col-lg-6">
 
               <a class="project-item d-block mx-auto" href="{{modalId}}" data-effect="mfp-zoom-out">
@@ -8,7 +8,7 @@
                   </div>
                 </div>
 
-                <img class="img-fluid" src="{{image}}">
+                <img class="img-fluid" src="{{imageSrc}}" alt="{{imageAlt}}">
               </a>
 
             </div>
