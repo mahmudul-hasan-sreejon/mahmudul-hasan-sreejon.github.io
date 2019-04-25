@@ -204,6 +204,33 @@
     }
   ],
 
+  "projectsSection": [
+    {
+      "id": "#project-modal-1",
+      "image": "public/images/project-images/project-1-image.png"
+    },
+    {
+      "id": "#project-modal-2",
+      "image": "public/images/project-images/project-2-image.png"
+    },
+    {
+      "id": "#project-modal-3",
+      "image": "public/images/project-images/project-3-image.png"
+    },
+    {
+      "id": "#project-modal-4",
+      "image": "public/images/project-images/project-4-image.png"
+    },
+    {
+      "id": "#project-modal-5",
+      "image": "public/images/project-images/project-5-image.png"
+    },
+    {
+      "id": "#project-modal-6",
+      "image": "public/images/project-images/project-6-image.png"
+    }
+  ],
+
   "skillsSection": [
     {
       "fieldName": "Programming Language",

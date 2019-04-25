@@ -1,0 +1,15 @@
+{% macro projectField(modalId, image) %}
+            <div class="col-md-6 col-lg-6">
+
+              <a class="project-item d-block mx-auto" href="{{modalId}}" data-effect="mfp-zoom-out">
+                <div class="project-item-caption d-flex position-absolute h-100 w-100">
+                  <div class="project-item-caption-content my-auto w-100 text-center text-white">
+                    <i class="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+
+                <img class="img-fluid" src="{{image}}">
+              </a>
+
+            </div>
+{% endmacro %}
