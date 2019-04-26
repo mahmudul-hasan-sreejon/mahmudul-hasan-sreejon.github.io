@@ -31,14 +31,21 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-// File source paths start
-var CSS_PATH = 'src/styles/**/*.css';
+// File(s) paths start
+var STYLES_PATH = 'src/styles/**/*.css';
 var SCRIPTS_PATH = 'src/scripts/**/*.js';
 var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
 var TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks|njk)';
 
-var DIST_PATH = 'public';
-// File source paths end
+var DIST_BASE_PATH = 'public';
+var DIST_STYLES_PATH = 'public/styles';
+var DIST_SCRIPTS_PATH = 'public/scripts';
+var DIST_IMAGES_PATH = 'public/images';
+var DIST_TEMPLATES_PATH = './';
+
+var TEMPLATES_DATA_PATH = './src/templates/data.json';
+var TEMPLATES_LAYOUTS_PATH = ['src/templates/layouts'];
+// File(s) paths end
 
 
 
@@ -48,14 +55,14 @@ gulp.task('default', ['clean', 'images', 'styles', 'scripts'], function() {});
 
 // Clean task
 gulp.task('clean', function() {
-	return del.sync([DIST_PATH]);
+	return del.sync([DIST_BASE_PATH]);
 });
 
 
-// Styles for CSS task
+// Styles task
 gulp.task('styles', function() {
 	return (
-		gulp.src(CSS_PATH) // path for source css files
+		gulp.src(STYLES_PATH) // path for source css files
 		.pipe(plumber(function(err) { // restart server if any error occurs
 			console.log('Styles Task Error:');
 			console.log(err);
@@ -66,7 +73,7 @@ gulp.task('styles', function() {
 		.pipe(concat('resume.min.css')) // concat all the css files
 		.pipe(cleanCSS()) // minify all the css file(s)
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(DIST_PATH + '/styles')) // new minified css file location
+		.pipe(gulp.dest(DIST_STYLES_PATH)) // new minified css file location
 		.pipe(livereload()) // check for updates
 	);
 });
@@ -86,7 +93,7 @@ gulp.task('scripts', function() {
 		.pipe(uglify()) // minify all the script files
 		.pipe(concat('resume.min.js')) // concat all the script files
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(DIST_PATH + '/scripts')) // new minified script file location
+		.pipe(gulp.dest(DIST_SCRIPTS_PATH)) // new minified script file location
 		.pipe(livereload()) // check for updates
 	);
 });
@@ -110,7 +117,7 @@ gulp.task('images', function() {
 		// 	imageminPngquant(),
 		// 	imageminJpegRecompress()
 		// ])) // lossy compression
-		.pipe(gulp.dest(DIST_PATH + '/images')) // new compressed image file(s) location
+		.pipe(gulp.dest(DIST_IMAGES_PATH)) // new compressed image file(s) location
 		.pipe(livereload()) // check for updates
 	);
 });
@@ -126,16 +133,16 @@ gulp.task('templates', function() {
 			this.emit('end');
 		}))
 		.pipe(data(function() { // add data from data.json file
-				return require('./src/templates/data.json');
+				return require(TEMPLATES_DATA_PATH);
 		}))
 		.pipe(nunjucksRender({ // render templates
-			path: ['src/templates/layouts']
+			path: TEMPLATES_LAYOUTS_PATH
 		}))
-		// .pipe(htmlmin({ // Minify html
-		// 	collapseWhitespace: true,
-		// 	removeComments: true
-		// }))
-		.pipe(gulp.dest('src')) // new compressed template file(s) location
+		.pipe(htmlmin({ // Minify html
+			// collapseWhitespace: true,
+			// removeComments: true
+		}))
+		.pipe(gulp.dest(DIST_TEMPLATES_PATH)) // new compressed template file(s) location
 		.pipe(livereload()) // check for updates
 	);
 });
@@ -147,9 +154,8 @@ gulp.task('watch', ['default'], function() {
 
 	livereload.listen(); // listen for any change
 
-	gulp.watch(CSS_PATH, ['styles']); // run `styles` task when any change occurs in CSS_PATH
+	gulp.watch(STYLES_PATH, ['styles']); // run `styles` task when any change occurs in STYLES_PATH
 	gulp.watch(SCRIPTS_PATH, ['scripts']); // run `scripts` task when any change occurs in SCRIPTS_PATH
 	gulp.watch(IMAGES_PATH, ['images']); // run `images` task when any change occurs in IMAGES_PATH
-
-	// gulp.watch(TEMPLATES_PATH, ['templates']); // run `templates` task when any change occurs in TEMPLATES_PATH
+	gulp.watch(TEMPLATES_PATH, ['templates']); // run `templates` task when any change occurs in TEMPLATES_PATH
 });
