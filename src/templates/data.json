@@ -148,69 +148,69 @@
   "projectInfo": [
     {
       "id": "project-modal-1",
-      "name": "e-Voting Platform using Blockchain",
+      "name": "TherapyRoute",
       "image": {
         "src": "public/images/project-images/project-1-image.png",
         "alt": "Project Pic 1"
+      },
+      "description": "TherapyRoute is an ideologically-driven, clinician-run platform. TherapyRoute helps people to find their best fit psychologist, psychiatrist, social worker, family therapist, counsellor, or other nearby mental health professional or organisation. It is built using <b>MeteorJS</b>.",
+      "link": "https://www.therapyroute.com/",
+      "duration": "April 2019 - Present"
+    },
+    {
+      "id": "project-modal-2",
+      "name": "JustDo",
+      "image": {
+        "src": "public/images/project-images/project-2-image.png",
+        "alt": "Project Pic 2"
+      },
+      "description": "JustDo is an innovative new system for business and personal management, providing a central location for planning, managing, and executing all processes and operations. Designed to support the 3 pillars of good management, JustDo is the right tool to manage and track all organizational departments and processes, from high-level planning to daily, ongoing tasks.",
+      "link": "https://justdo.com/",
+      "duration": "September 2019 - Present"
+    },
+    {
+      "id": "project-modal-3",
+      "name": "e-Voting Platform using Blockchain",
+      "image": {
+        "src": "public/images/project-images/project-3-image.png",
+        "alt": "Project Pic 3"
       },
       "description": "An Electronic voting platform that uses Blockchain technology which supports distributed network. It provides greater transparency, inherent anonymity and immutability due to open and distributed ledgers. It also delivers security and reliability through image based authentication system.",
       "link": "https://github.com/mahmudul-hasan-sreejon/e-Voting-with-Blockchain",
       "duration": "October 2017 - December 2017"
     },
     {
-      "id": "project-modal-2",
-      "name": "Dig Out",
-      "image": {
-        "src": "public/images/project-images/project-2-image.png",
-        "alt": "Project Pic 2"
-      },
-      "description": "An open source web search engine for finding websites and images. It evaluates results of web searches for appropriateness and relevancy as related to search query input. It can analyze keywords to achieve optimum numerical ranking for web searches.",
-      "link": "http://dig-out.ml/",
-      "duration": "December 2018 - January 2019"
-    },
-    {
-      "id": "project-modal-3",
-      "name": "Srt-Lnk",
-      "image": {
-        "src": "public/images/project-images/project-3-image.png",
-        "alt": "Project Pic 3"
-      },
-      "description": "Link/Url shortener web application that keeps track of links for individual users built on <b>Meteor</b> and <b>React</b>. It provides data security through manual authentication, data validation, publications and subscriptions.",
-      "link": "https://srt-lnk-mhs.herokuapp.com/",
-      "duration": "February 2019"
-    },
-    {
       "id": "project-modal-4",
-      "name": "Forkify",
+      "name": "Notes",
       "image": {
         "src": "public/images/project-images/project-4-image.png",
         "alt": "Project Pic 4"
       },
-      "description": "Recipe web application for kitchen hobbyists and beginner cooks. Search through thousands of recipes for cooking instructions and ingredients; save your favorite recipes via local storage. It uses <b>RESTful</b> approach for fetching data from the <b>Food2Fork API</b>.",
-      "link": "https://forkify-mhs.herokuapp.com",
-      "duration": "February 2019 - March 2019"
+      "description": "Note-taking web app that keeps track of user ideas into their notebook built on <b>MeteorJS</b> and <b>React.js</b>. It helps you focus on what matters most and have access to your information when you need it.",
+      "link": "https://notes-mhs.herokuapp.com/",
+      "duration": "December 2019 - January 2020"
     },
     {
       "id": "project-modal-5",
-      "name": "Student Enrolment System",
+      "name": "Srt-Lnk",
       "image": {
         "src": "public/images/project-images/project-5-image.png",
         "alt": "Project Pic 5"
       },
-      "description": "A content management system built for school administrative representatives. It can track student records, make corrections and provides security to all information.",
-      "link": "https://github.com/mahmudul-hasan-sreejon/Student-Enrolment-System",
-      "duration": "August 2016 - September 2016"
+      "description": "Link/Url shortener web application that keeps track of links for individual users built on <b>MeteorJS</b> and <b>React.js</b>. It provides data security through manual authentication, data validation, publications and subscriptions.",
+      "link": "https://srt-lnk-mhs.herokuapp.com/",
+      "duration": "February 2019"
     },
     {
       "id": "project-modal-6",
-      "name": "Block Breakout",
+      "name": "Forkify",
       "image": {
         "src": "public/images/project-images/project-6-image.png",
         "alt": "Project Pic 6"
       },
-      "description": "It is a clone of the classic <b>Breakout</b> game. I hand coded each module i.e. player movements, interaction with other game objects and events etc. Also, designed arts and animations to deliver a great playable environment.",
-      "link": "https://github.com/mahmudul-hasan-sreejon/Block-Breakout",
-      "duration": "January 2019 - March 2019"
+      "description": "Recipe web application for kitchen hobbyists and beginner cooks. Search through thousands of recipes for cooking instructions and ingredients; save your favorite recipes via local storage. It uses <b>RESTful</b> approach for fetching data from the <b>Food2Fork API</b>.",
+      "link": "https://forkify-mhs.herokuapp.com",
+      "duration": "February 2019 - March 2019"
     }
   ],
 
