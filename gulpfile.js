@@ -1,25 +1,38 @@
-"use strict";
+const gulp = require('gulp');
+const del = require('del');
+const livereload = require('gulp-livereload');
+const plumber = require('gulp-plumber');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const nunjucksRender = require('gulp-nunjucks-render');
+const data = require('gulp-data');
+const htmlmin = require('gulp-htmlmin');
 
-var gulp = require('gulp');
-var del = require('del');
-var livereload = require('gulp-livereload');
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var babel = require('gulp-babel');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
-var cleanCSS = require('gulp-clean-css');
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
-var imageminJpegRecompress = require('imagemin-jpeg-recompress');
-var nunjucksRender = require('gulp-nunjucks-render');
-var data = require('gulp-data');
-var htmlmin = require('gulp-htmlmin');
+// File(s) path(s)
+const STYLES_PATH = 'src/styles/**/*.css';
+const SCRIPTS_PATH = 'src/scripts/**/*.js';
+const IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
+const TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks|njk)';
+const TEMPLATES_DATA_PATH = './src/templates/data.json';
+const TEMPLATES_LAYOUTS_PATH = ['src/templates/layouts'];
+const TEMPLATES_WATCH_PATH = 'src/templates/**/*.+(html|nunjucks|njk|json)';
 
-// Set browser(s) to support autoprefixer start
-var AUTOPREFIXER_BROWSERS = [
+const DEST_BASE_PATH = 'public';
+const DEST_STYLES_PATH = 'public/styles';
+const DEST_SCRIPTS_PATH = 'public/scripts';
+const DEST_IMAGES_PATH = 'public/images';
+const DEST_TEMPLATES_PATH = './';
+
+// Set browser(s) list for autoprefixer support
+const AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
 	'ie_mob >= 10',
 	'ff >= 30',
@@ -31,36 +44,9 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-// File(s) paths start
-var STYLES_PATH = 'src/styles/**/*.css';
-var SCRIPTS_PATH = 'src/scripts/**/*.js';
-var IMAGES_PATH = 'src/images/**/*.{png,jpeg,jpg,svg,gif,ico}';
-var TEMPLATES_PATH = 'src/templates/pages/**/*.+(html|nunjucks|njk)';
 
-var DIST_BASE_PATH = 'public';
-var DIST_STYLES_PATH = 'public/styles';
-var DIST_SCRIPTS_PATH = 'public/scripts';
-var DIST_IMAGES_PATH = 'public/images';
-var DIST_TEMPLATES_PATH = './';
-
-var TEMPLATES_DATA_PATH = './src/templates/data.json';
-var TEMPLATES_LAYOUTS_PATH = ['src/templates/layouts'];
-// File(s) paths end
-
-
-
-// Default task
-gulp.task('default', ['clean', 'images', 'styles', 'scripts'], function() {});
-
-
-// Clean task
-gulp.task('clean', function() {
-	return del.sync([DIST_BASE_PATH]);
-});
-
-
-// Styles task
-gulp.task('styles', function() {
+// Styles task(s)
+function styles() {
 	return (
 		gulp.src(STYLES_PATH) // path for source css files
 		.pipe(plumber(function(err) { // restart server if any error occurs
@@ -69,18 +55,18 @@ gulp.task('styles', function() {
 			this.emit('end');
 		}))
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer({ browsers: AUTOPREFIXER_BROWSERS })) // add vendor prefixes
+		.pipe(autoprefixer({ overrideBrowserslist: AUTOPREFIXER_BROWSERS })) // add vendor prefixes
 		.pipe(concat('resume.min.css')) // concat all the css files
 		.pipe(cleanCSS()) // minify all the css file(s)
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(DIST_STYLES_PATH)) // new minified css file location
+		.pipe(gulp.dest(DEST_STYLES_PATH)) // new minified css file location
 		.pipe(livereload()) // check for updates
 	);
-});
+}
 
 
-// Scripts task
-gulp.task('scripts', function() {
+// Scripts task(s)
+function scripts() {
 	return (
 		gulp.src(SCRIPTS_PATH) // path for source script files
 		.pipe(plumber(function(err) { // restart server if any error occurs
@@ -93,14 +79,14 @@ gulp.task('scripts', function() {
 		.pipe(uglify()) // minify all the script files
 		.pipe(concat('resume.min.js')) // concat all the script files
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(DIST_SCRIPTS_PATH)) // new minified script file location
+		.pipe(gulp.dest(DEST_SCRIPTS_PATH)) // new minified script file location
 		.pipe(livereload()) // check for updates
 	);
-});
+}
 
 
-// Images task
-gulp.task('images', function() {
+// Images task(s)
+function images() {
 	return (
 		gulp.src(IMAGES_PATH) // path for source image files
 		.pipe(plumber(function(err) { // restart server if any error occurs
@@ -117,14 +103,14 @@ gulp.task('images', function() {
 		// 	imageminPngquant(),
 		// 	imageminJpegRecompress()
 		// ])) // lossy compression
-		.pipe(gulp.dest(DIST_IMAGES_PATH)) // new compressed image file(s) location
+		.pipe(gulp.dest(DEST_IMAGES_PATH)) // new compressed image file(s) location
 		.pipe(livereload()) // check for updates
 	);
-});
+}
 
 
-// Templates task
-gulp.task('templates', function() {
+// Templates task(s)
+function templates() {
 	return (
 		gulp.src(TEMPLATES_PATH) // path for source template files
 		.pipe(plumber(function(err) { // restart server if any error occurs
@@ -142,20 +128,52 @@ gulp.task('templates', function() {
 			// collapseWhitespace: true,
 			// removeComments: true
 		}))
-		.pipe(gulp.dest(DIST_TEMPLATES_PATH)) // new compressed template file(s) location
+		.pipe(gulp.dest(DEST_TEMPLATES_PATH)) // new compressed template file(s) location
 		.pipe(livereload()) // check for updates
 	);
-});
+}
 
 
-// Watch task
-gulp.task('watch', ['default'], function() {
+// Delete task(s)
+function deletePublicFolder(done) {
+	del.sync([DEST_BASE_PATH]);
+	done();
+}
+
+function deletePublicStyles(done) {
+	del.sync([DEST_STYLES_PATH]);
+	done();
+}
+
+function deletePublicScripts(done) {
+	del.sync([DEST_SCRIPTS_PATH]);
+	done();
+}
+
+function deletePublicImages(done) {
+	del.sync([DEST_IMAGES_PATH]);
+	done();
+}
+
+
+// Watch task(s)
+function watchSourceFolder() {
 	require('./server'); // start the server
 
 	livereload.listen(); // listen for any change
 
-	gulp.watch(STYLES_PATH, ['styles']); // run `styles` task when any change occurs in STYLES_PATH
-	gulp.watch(SCRIPTS_PATH, ['scripts']); // run `scripts` task when any change occurs in SCRIPTS_PATH
-	gulp.watch(IMAGES_PATH, ['images']); // run `images` task when any change occurs in IMAGES_PATH
-	gulp.watch(TEMPLATES_PATH, ['templates']); // run `templates` task when any change occurs in TEMPLATES_PATH
-});
+	gulp.watch(STYLES_PATH, gulp.series(deletePublicStyles, styles)); // run `deletePublicStyles` & `styles` task when any change occurs in STYLES_PATH
+	gulp.watch(SCRIPTS_PATH, gulp.series(deletePublicScripts, scripts)); // run `deletePublicScripts` & `scripts` task when any change occurs in SCRIPTS_PATH
+	gulp.watch(IMAGES_PATH, gulp.series(deletePublicImages, images)); // run `deletePublicImages` & `images` task when any change occurs in IMAGES_PATH
+	gulp.watch(TEMPLATES_WATCH_PATH, templates); // run `templates` task when any change occurs in TEMPLATES_WATCH_PATH
+}
+
+
+// Export task(s)
+exports.default = gulp.parallel(deletePublicFolder, templates, styles, scripts, images);
+exports.clean = deletePublicFolder;
+exports.style = styles;
+exports.script = scripts;
+exports.image = images;
+exports.template = templates;
+exports.watch = watchSourceFolder;
