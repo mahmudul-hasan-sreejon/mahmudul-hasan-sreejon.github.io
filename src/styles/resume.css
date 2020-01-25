@@ -70,8 +70,13 @@ p.lead {
 	font-size: 3rem
 }
 
+.dev-icons .list-inline-item i {
+	color: #868e96;
+	transition: all .5s ease-in;
+}
+
 .dev-icons .list-inline-item i:hover {
-	color: #DC3545
+	color: #DC3545;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -175,7 +180,8 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-	color: #DC3545
+	color: #DC3545;
+	transition: all .5s ease-in;
 }
 
 a:active, a:focus, a:hover {
