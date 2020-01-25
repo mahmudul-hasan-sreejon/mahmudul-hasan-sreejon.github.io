@@ -80,14 +80,23 @@
 
   "experiencesSection": [
     {
-      "designation": "Game Developer",
-      "company": "Dark Lighters",
+      "designation": "Web Developer",
+      "company": "TherapyRoute",
       "activities": [
-        "Assisted in development of new ideas, analysis and design phase and feasibility judgments",
-        "Designed and balanced games including the creation of design documentation for future titles",
-        "Worked in agile scrum environment"
+        "Implemented a robust set of services and APIs to power the web application",
+        "Integrated the front-end and back-end aspects of the web application using standard practices",
+        "Maintained, Optimized and expanded/enhanced the web application"
       ],
-      "duration": "February 2015 - December 2017"
+      "duration": "April 2019 - Present"
+    },
+    {
+      "designation": "Web Developer",
+      "company": "JustDo",
+      "activities": [
+        "Implemented several resource management and time tracker based plugins",
+        "Integrated the front-end and back-end aspects of the web plugins"
+      ],
+      "duration": "September 2019 - Present"
     }
   ],
 
