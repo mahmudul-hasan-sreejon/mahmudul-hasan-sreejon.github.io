@@ -272,10 +272,6 @@
           "icon": "icon-cplusplus"
         },
         {
-          "title": "C#",
-          "icon": "icon-csharp"
-        },
-        {
           "title": "Python",
           "icon": "fab fa-python"
         },
@@ -301,14 +297,6 @@
           "icon": "fas fa-flask"
         },
         {
-          "title": "Kivy",
-          "icon": "fab fa-android"
-        },
-        {
-          "title": "Laravel",
-          "icon": "icon-laravel"
-        },
-        {
           "title": "jQuery",
           "icon": "icon-jquery"
         },
@@ -321,7 +309,7 @@
           "icon": "fas fa-meteor"
         },
         {
-          "title": "React",
+          "title": "React.js",
           "icon": "fab fa-react"
         }
       ]
@@ -361,10 +349,6 @@
         {
           "title": "PostgreSQL",
           "icon": "icon-postgres"
-        },
-        {
-          "title": "SQLite",
-          "icon": "fas fa-database"
         },
         {
           "title": "MongoDB",
@@ -410,15 +394,6 @@
       ]
     },
     {
-      "fieldName": "Game Engine",
-      "skills": [
-        {
-          "title": "Unity",
-          "icon": "icon-unity"
-        }
-      ]
-    },
-    {
       "fieldName": "Text Editor & IDE",
       "skills": [
         {
@@ -432,10 +407,6 @@
         {
           "title": "Code::Blocks",
           "icon": "fas fa-qrcode"
-        },
-        {
-          "title": "Rider",
-          "icon": "fas fa-motorcycle"
         },
         {
           "title": "PyCharm",
