@@ -93,15 +93,16 @@
 
   "head": {
     "title": {
-      "description": "Full Stack Web Developer, Problem Solver, Game Developer"
+      "description": "Full-Stack JavaScript Web Developer, Problem Solver, Technology Enthusiast"
     },
     "favicon": "public/images/favicon.ico"
   },
 
   "navbar": {
-    "title": {
+    "profileImage": {
       "src": "public/images/profile.png",
-      "alt": "Profile Pic"
+      "alt": "Profile Pic",
+      "title": "Mahmudul Hasan Sreejon"
     },
     "menuItem": [
       {
