@@ -293,7 +293,8 @@ a:active, a:focus, a:hover {
 
 .btn-danger {
   background-color: #DC3545;
-  border-color: #DC3545;
+	border-color: #DC3545;
+	transition: all .5s ease-in;
 }
 
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
