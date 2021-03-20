@@ -1,6 +1,6 @@
-# Resume
+# Portfolio
 
-My personal resume website.
+My personal portfolio website.
 
 ## Technologies & Tools Used
 
@@ -19,4 +19,4 @@ My personal resume website.
 
 ## Author
 
-Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](http://mahmudulhasansreejon.ml/)).
+Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://mahmudul-hasan-sreejon.com/)).
