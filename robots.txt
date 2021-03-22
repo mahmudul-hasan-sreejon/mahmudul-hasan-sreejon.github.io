@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.mahmudul-hasan-sreejon.com/sitemap.xml
-Host: https://www.mahmudul-hasan-sreejon.com
